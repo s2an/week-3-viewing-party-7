@@ -12,10 +12,27 @@ class UsersController <ApplicationController
     if user.save
       redirect_to user_path(user)
     else  
+      flash[:alert] = "field cannot be blank" # <--- can I make this dynamic via the params??
       flash[:error] = user.errors.full_messages.to_sentence
       redirect_to register_path
     end 
   end 
+
+  def login_form; end
+  
+  def login_user
+    # require "pry"; binding.pry
+    user = User.find_by(email: params[:email])
+    if user.authenticate(params[:password])
+      # session[:user_id] = user.id
+      # flash[:success] = "Welcome, #{user.email}!"
+      redirect_to user_path(user)
+    else
+      # sad path, bad credentials
+      flash[:error] = "Incorrect password/credentials"
+      render :login_form
+    end
+  end
 
   private 
 
