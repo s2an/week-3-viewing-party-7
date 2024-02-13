@@ -24,8 +24,9 @@ class UsersController <ApplicationController
     # require "pry"; binding.pry
     user = User.find_by(email: params[:email])
     if user.authenticate(params[:password])
+      cookies[:location] = params[:location]
       # session[:user_id] = user.id
-      # flash[:success] = "Welcome, #{user.email}!"
+      flash[:success] = "Welcome, #{user.email}!"
       redirect_to user_path(user)
     else
       # sad path, bad credentials
@@ -33,6 +34,14 @@ class UsersController <ApplicationController
       render :login_form
     end
   end
+
+  def logout
+    session.delete(:user_id)
+
+    flash[:success] = "You have been logged out."
+    redirect_to root_path
+  end
+  
 
   private 
 
