@@ -80,4 +80,14 @@ RSpec.describe 'Landing Page' do
       
     end
   end
+  
+  describe "User Story 7" do
+    # As a visitor
+    # If I go to a movies show page ('/users/:user_id/movies/:movie_id')
+    # And click the button to Create a Viewing Party
+    # I'm redirected back to the movies show page, and a message appears to let me know I must be logged in or registered to create a Viewing Party.
+    it "Creates a Viewing Party Authorization" do 
+      
+    end
+  end
 end
