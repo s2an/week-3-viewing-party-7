@@ -50,4 +50,13 @@ RSpec.describe 'Landing Page' do
     
     end
   end
+
+  describe "User Story 4" do
+    # As a visitor
+    # When I visit the landing page
+    # I do not see the section of the page that lists existing users
+    it "Logged-out users see limited info on Landing Page" do
+      
+    end
+  end
 end
