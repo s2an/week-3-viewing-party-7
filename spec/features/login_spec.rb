@@ -33,7 +33,21 @@ RSpec.describe 'Landing Page' do
     # I see that I am still logged in.
     
     it "Remembers a user upon successful log in/registration" do
-      
+
+    end
+  end
+
+  describe "User Story 3" do
+    # As a logged-in user 
+    # When I visit the landing page
+    # I no longer see a link to Log In or Create an Account
+    # But I only see a link to Log Out.
+    # When I click the link to Log Out,
+    # I'm taken to the landing page
+    # And I see that the Log Out link has changed back to a Log In link
+    # And I still see the Create an Account button.
+    it "Logs out a User" do
+    
     end
   end
 end
