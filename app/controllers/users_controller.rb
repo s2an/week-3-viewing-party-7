@@ -5,6 +5,11 @@ class UsersController <ApplicationController
 
   def show 
     @user = User.find(params[:id])
+    if session[:user_id] == @user.id
+      @user = User.find(params[:id])
+    else
+      flash[:error] = "You do not have access"
+    end
   end 
 
   def create 

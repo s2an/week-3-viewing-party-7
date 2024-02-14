@@ -24,4 +24,16 @@ RSpec.describe 'Landing Page' do
 
     end
   end
+
+  describe "User Story 2" do
+    # As a user
+    # when I log in successfully
+    # and then leave the website and navigate to a different website entirely,
+    # Then when I return to *this* website, 
+    # I see that I am still logged in.
+    
+    it "Remembers a user upon successful log in/registration" do
+      
+    end
+  end
 end
