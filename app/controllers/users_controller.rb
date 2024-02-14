@@ -8,7 +8,8 @@ class UsersController <ApplicationController
     if session[:user_id] == @user.id
       @user = User.find(params[:id])
     else
-      flash[:error] = "You do not have access"
+      flash[:error] = "You must be logged in or registered to access a user's dashboard"
+      redirect_to root_path # <--- well that was important
     end
   end 
 

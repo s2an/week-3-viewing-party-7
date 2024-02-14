@@ -69,4 +69,15 @@ RSpec.describe 'Landing Page' do
       
     end
   end
+
+  describe "User Story 6" do
+    # As a visitor
+    # When I visit the landing page
+    # And then try to visit the user's dashboard ('/users/:user_id')
+    # I remain on the landing page
+    # And I see a message telling me that I must be logged in or registered to access a user's dashboard.
+    it "Dashboard Authorization" do
+      
+    end
+  end
 end
