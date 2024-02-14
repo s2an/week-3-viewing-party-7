@@ -59,4 +59,14 @@ RSpec.describe 'Landing Page' do
       
     end
   end
+
+  describe "User Story 5" do
+    # As a logged-in user
+    # When I visit the landing page 
+    # The list of existing users is no longer a link to their show pages
+    # But just a list of email addresses
+    it "Logged-in users no longer see links on Landing Page" do
+      
+    end
+  end
 end
